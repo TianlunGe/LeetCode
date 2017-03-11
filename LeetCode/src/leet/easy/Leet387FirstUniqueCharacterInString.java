@@ -9,7 +9,7 @@ public class Leet387FirstUniqueCharacterInString {
         	arr[ss[i] - 'a']++;
         }
         int res = len;
-        for(int i=0; i<26; i++){
+        /*for(int i=0; i<26; i++){
         	if(arr[i] == 1){
         		char c = (char) (i + 'a');
         		for(int j=0; j<len; j++){
@@ -17,6 +17,13 @@ public class Leet387FirstUniqueCharacterInString {
         				res = Math.min(res, j);
         			}
         		}
+        	}
+        }*/
+        //二次遍历原字符串，而不是遍历字符数组，会快好多。
+        for(int i=0; i<len; i++){
+        	if(arr[ss[i] - 'a'] == 1){
+        		res = i;
+        		break;
         	}
         }
         if(res == len){
