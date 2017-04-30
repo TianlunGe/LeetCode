@@ -3,6 +3,7 @@ package leet.easy;
 import java.util.HashSet;
 import java.util.Set;
 
+//Test
 public class Leet290WordPattern {
 	public boolean wordPattern(String pattern, String str) {
         String[] words = str.split("\\s");
